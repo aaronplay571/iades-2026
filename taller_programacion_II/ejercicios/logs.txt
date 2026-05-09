@@ -1,0 +1,7 @@
+[2024-03-15 08:23:11] ERROR   | servidor.py  | Conexión rechazada en puerto 8080
+[2024-03-15 08:45:02] INFO    | app.py       | Usuario 'admin' inició sesión
+[2024-03-15 09:01:55] WARNING | database.py  | Consulta tardó más de 2 segundos
+[2024-03-15 09:10:30] ERROR   | servidor.py  | Timeout al conectar con base de datos
+[2024-03-15 09:33:47] INFO    | app.py       | Usuario 'juan' cerró sesión
+[2024-03-15 10:05:21] ERROR   | app.py       | Permiso denegado para usuario 'pedro'
+[2024-03-15 10:45:00] WARNING | servidor.py  | Uso de CPU al 90%
