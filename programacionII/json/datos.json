@@ -1,0 +1,21 @@
+{
+    "nombre": "Juan",
+    "apellido": "Gramardi",
+    "edad": 26,
+    "altura": 76.8,
+    "estado": true,
+    "activo": false,
+    "notas": null,
+    "cursos": [
+        "0",
+        "1"
+    ],
+    "atributos": {
+        "A": 0,
+        "B": 1
+    },
+    "colores": [
+        "rojo",
+        "azul"
+    ]
+}
