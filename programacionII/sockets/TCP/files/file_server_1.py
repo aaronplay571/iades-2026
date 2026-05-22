@@ -17,6 +17,7 @@ Servidor TCP
 
 
 """
+import json
 import socket
 import os
 
@@ -24,7 +25,7 @@ MAX_PENDINDING_CONN = 5
 
 FILES_PATH = "/home/pablo/files"
 
-SERVER_PORT = 5000
+SERVER_PORT = 5003
 SERVER_IP = "0.0.0.0"
 
 # creamos el socket
@@ -41,16 +42,19 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as conn:
 
         print(f"Se conecto: {addr}")
 
-        archivo = os.listdir
-        client_conn.sendall(datos)
-        # nombre_archivo = client_conn.recv(1024).decode()
+        # envio una lista con los archivos disponibles en formato json             
+        archivos = os.listdir(FILES_PATH)
+        print("archivos disponibles: ", )
+        obj = json.dumps(archivos)
+        client_conn.sendall(obj.encode())
+
+        nombre_archivo = client_conn.recv(1024).decode()
 
         print("Buscando archivo: ", nombre_archivo)
 
         archivo = f"{FILES_PATH}/{nombre_archivo}"
-
+        print("Transfiriendo archivo: ", archivo)
         with open(archivo, "rb") as file:
-
             while True:
                 datos = file.read(1024)
                 if not datos:

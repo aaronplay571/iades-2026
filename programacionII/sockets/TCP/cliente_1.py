@@ -17,7 +17,7 @@ import socket
 import sys
 
 SERVER_IP = "127.0.0.1"
-SERVER_PORT = 5001
+SERVER_PORT = 5002
 
 dato = sys.argv[1]
 
